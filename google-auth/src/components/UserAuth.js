@@ -1,6 +1,7 @@
 
 import React,{useState }from "react";
 import { auth } from "./firebase";
+import GoogleAuth from "./googleAuth";
 
 
 const UserAuth=()=>{
@@ -33,6 +34,7 @@ const UserAuth=()=>{
                     <button onClick={signUp}>Sign Up</button>
                 </form>
             </center>
+            <GoogleAuth/>
         </div>
     )
 }

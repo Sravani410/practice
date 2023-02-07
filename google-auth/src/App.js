@@ -1,8 +1,10 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import UserAuth from "./UserAuth";
-import { auth } from "./firebase";
-import Home from "./Home";
+import UserAuth from "./components/UserAuth";
+import { auth } from "./components/firebase";
+import Home from "./components/Home";
+// import GoogleAuth from "./components/googleAuth";
+
 function App() {
   const [presentData, setPresentData] = useState(null);
   useEffect(() => {
@@ -21,7 +23,12 @@ function App() {
   }, []);
   return (
     <>
-      <center>{presentData ? <Home /> : <UserAuth />}</center>
+    <div>
+       <center>{presentData ? <Home /> : <UserAuth />}</center>
+   
+    </div>
+
+      
     </>
   );
 }
