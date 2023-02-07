@@ -32,3 +32,7 @@ b) after click that Add Firebase to your web app will open
 
 
 
+/* Google Authentication using firebase */
+
+1. first enable the google auth using the email ---> it was mandatatory to enter the email --> this process is called Config
+2.signInWithPopup() ----> it is  using for pop up in the browser when we click button
