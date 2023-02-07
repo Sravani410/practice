@@ -1,0 +1,24 @@
+/* Authentication using firebase*/
+===================================
+
+1. create the project like Auth
+2.after it is opening the page for that we have to do 2 steps
+  i) Authentication  
+  ii)Configuration process
+
+ i) Authentication :
+ ===================
+ a)in side of that page there is a  build dashboard in that choose Authentication 
+ b)then in that there sign in method choose whatever we want like email and password process that should be enable because we are using the email and password 
+
+ii)Configuration process:
+============================
+a) in side click on project overview in that go to project settings in that go to last choose the devices for example in that i'm using the web app 
+b) after click that Add Firebase to your web app will open  
+
+3. in the frontend:
+=================
+ "when we are doing handleChange in input fields the name and value should be the same"
+   a)sign up: onClick----> createUserWithEmailAndPassword(auth, email, password) -->to create a new account
+   b)sign in: onClick----> signInWithEmailAndPassword(auth, email, password) -->check the account
+
