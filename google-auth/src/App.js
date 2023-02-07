@@ -1,23 +1,27 @@
 import "./App.css";
-import React,{useEffect} from "react"
+import React, { useEffect, useState } from "react";
 import UserAuth from "./UserAuth";
 import { auth } from "./firebase";
-
-
+import Home from "./Home";
 function App() {
-  useEffect(()=>{
-   auth.onAuthStateChanged(user=>{
-    console.log("userrrrrr",user)
-    console.log({
-      email:user.email,
-      uid:user.uid
-     })
-   },[])
- 
-  })
+  const [presentData, setPresentData] = useState(null);
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+      if(user){
+        setPresentData({
+          email: user.email,
+          uid: user.uid
+        });
+      }
+      else{
+        setPresentData(null)
+      }
+     
+    });
+  }, []);
   return (
     <>
-     <UserAuth/>
+      <center>{presentData ? <Home /> : <UserAuth />}</center>
     </>
   );
 }
