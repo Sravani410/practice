@@ -1,0 +1,13 @@
+/* Phone Authentication using firebase*/
+
+Steps to follow:
+================
+
+1.create a project
+2.copy the sdk and paste in the firebase-config 
+3.install the libraries are firebase,
+    otp-input-react---> it will provide the automatically otp 
+    react-hot-toast-->  it gives the message
+    react-icons--> it provides the icons
+    react-phone-input-2-->https://bl00mber.github.io/react-phone-input-2.html --> ui based on country with dropdown 
+4.
