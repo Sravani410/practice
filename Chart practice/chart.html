@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- First, we need to have a canvas in our page. It's recommended to give the chart its own container for responsiveness. -->
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- Now that we have a canvas, we can include Chart.js from a CDN. -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Finally, we can create a chart. 
+        We add a script that acquires the myChart canvas element and 
+        instantiates new Chart with desired configuration: bar chart type, labels, data points, and options. -->
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+       
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange","Pink","violet"],
+          datasets: [
+            {
+              label: "Bar Dataset",
+              data: [10, 20, 30, 40],
+              type: "bar",
+              // this dataset is drawn below
+              order: 2,
+            },
+            {
+              label: "Line Dataset",
+              data: [50, 10, 10, 10,50, 10, 10, 10],
+              type: "line",
+              // this dataset is drawn on top
+              order: 1,
+            },
+            {
+              label: "Line Dataset",
+              data: [50, 30, 40, 60],
+              type: "line",
+              // this dataset is drawn on top
+              order: 2,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              // beginAtZero: true,
+              grace: 30
+            },
+          },
+        },
+      });
+      // new Chart(ctx, {
+      //   type: "bar",
+      //   data: {
+      //     datasets: [
+      //       {
+      //         label: "Bar Dataset",
+      //         data: [10, 20, 30, 40],
+      //         // this dataset is drawn below
+      //         order: 2,
+      //       },
+      //       {
+      //         label: "Line Dataset",
+      //         data: [10, 10, 10, 10],
+      //         type: "line",
+      //         // this dataset is drawn on top
+      //         order: 1,
+      //       },
+      //     ],
+      //     labels: ["January", "February", "March", "April"],
+      //   },
+      //   options: options,
+      // });
+    </script>
+  </body>
+</html>
