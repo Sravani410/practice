@@ -1,4 +1,13 @@
 import "./App.css";
+
+import PhoneAuth from "./components/phoneauth";
+
+function App() {
+  return (
+    <>
+     <PhoneAuth/> 
+    </>
+
 import { BsFillShieldLockFill } from "react-icons/bs";
 
 function App() {
@@ -11,6 +20,7 @@ function App() {
         </div>
       </center>
     </div>
+
   );
 }
 
