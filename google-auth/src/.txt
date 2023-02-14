@@ -36,3 +36,10 @@ b) after click that Add Firebase to your web app will open
 
 1. first enable the google auth using the email ---> it was mandatatory to enter the email --> this process is called Config
 2.signInWithPopup() ----> it is  using for pop up in the browser when we click button
+
+
+/* Firebase Google Authentication with Context API ans protected Router */
+
+1. install bootstrap,react-bootstrap,react-router-dom,react-google-button
+2. create context folder in that create UserAuthContext.js
+3.  In components folder create the files Home,Login,ProtectedRoute,Signup
