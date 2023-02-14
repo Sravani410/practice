@@ -5,11 +5,8 @@ import PhoneAuth from "./components/phoneauth";
 function App() {
   return (
     <>
-     <PhoneAuth/> 
+      <PhoneAuth />
     </>
-
-
-
-  )
+  );
 }
 export default App;
